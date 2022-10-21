@@ -26,6 +26,17 @@ function addItem() {
     inpNewTask.val(""); //clear input field
 }
 
+//remove completed tasks:
+function clearFinishedTasks() {
+    //console.log('clicked', $('#ulTasks .done'));
+    $('#ulTasks .done').remove();
+}
+
+//sort completed tasks to the bottom of the list
+function sortTasks() {
+    $('#ulTasks .done').appendTo(ulTasks);
+}
+
 //pressing "Enter" key add Task in the list:
 inpNewTask.keypress((e) => {
     //find which is is being pressed. 'Enter'=13(Event.which value)
@@ -35,6 +46,5 @@ inpNewTask.keypress((e) => {
 
 btnReset.click(() => inpNewTask.val(""))
 
-btnClear.click(() => {
-    //console.log('clicked',$('#ulTasks').li.done)
-})
+btnClear.click(clearFinishedTasks);
+btnSort.click(sortTasks);
