@@ -15,7 +15,9 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+    integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <link rel="stylesheet" href="./style.css">
   <script defer src="./script.js"></script>
@@ -26,35 +28,39 @@
     <h1 style="text-align: center;">Timeearly</h1>
     <div class="row">
       <!-- input box -->
-      <div class="col">
+      <div class="col-md-7">
         <div class="form-group">
           <input type="text" class="form-control backcolor p-3" id="inpNewTask" placeholder="What needs to be done?"
             aria-describedby="newTaskHelp">
           <small id="newTaskHelp" class="form-text text-muted">New Task will get appended in your existing Task.</small>
         </div>
       </div>
-    </div>
 
-    <!-- buttons -->
-    <div class="row px-4 my-1 align-items-center">
-        <button type="button"  id="btnAdd" class="btn col m-1 btn-success ">
-          <i class="fas fa-plus-square"></i> Add</button>
-        <button type="button"  id="btnReset" class="btn col m-1 btn-warning">
-          <i class="fas fa-backspace"></i> Reset</button>
-        <button type="button"  id="btnSort" class="btn col m-1 btn-info">
-          <i class="fas fa-sort-amount-down"></i> Sort</button>
-        <button type="button"  id="btnClear" class="btn col m-1 btn-danger">
-          <i class="fas fa-trash-alt"></i> Clear</button>
+      <div class="row col-md-5">
+
+        <!-- buttons -->
+        <div class="col-6 colo col-sm-3 col-md-6 p-1">
+          <button type="button" id="btnAdd" class="btn btn-success">
+            <i class="fas fa-plus-square"></i> Add</button>
+        </div>
+        <div class="col-6 colo col-sm-3 col-md-6 p-1">
+          <button type="button" id="btnReset" class="btn btn-warning">
+            <i class="fas fa-backspace"></i> Reset</button>
+        </div>
+        <div class="col-6 colo col-sm-3 col-md-6 p-1">
+          <button type="button" id="btnSort" class="btn btn-info">
+            <i class="fas fa-sort-amount-down"></i> Sort</button>
+        </div>
+        <div class="col-6 colo col-sm-3 col-md-6 p-1">
+          <button type="button" id="btnClear" class="btn btn-danger">
+            <i class="fas fa-trash-alt"></i> Clear</button>
+        </div>
+      </div>
     </div>
 
     <!-- Todo List items -->
     <div class="row">
       <ul id="ulTasks" class="list-group col m-4">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
       </ul>
     </div>
   </div>
